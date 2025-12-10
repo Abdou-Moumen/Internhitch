@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>home page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="homepage.css" />
+
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <style>
+        /* Import Google font - Poppins */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+        .wrapper {
+            max-width: 1100px;
+            width: 100%;
+            height: 340px;
+            position: relative;
+        }
+
+        .wrapper .carousel {
+            display: grid;
+            grid-auto-flow: column;
+            grid-auto-columns: calc((100% / 3) - 11px);
+            overflow-x: auto;
+            justify-content: center;
+            margin: 20px 50px;
+            scroll-snap-type: x mandatory;
+            gap: 23px;
+            border-radius: 12px;
+            scroll-behavior: smooth;
+            scrollbar-width: none;
+        }
+
+        .carousel::-webkit-scrollbar {
+            display: none;
+        }
+
+        .carousel.no-transition {
+            scroll-behavior: auto;
+        }
+
+        .carousel.dragging {
+            scroll-snap-type: none;
+            scroll-behavior: auto;
+        }
+
+
+        .carousel.dragging .card {
+            cursor: grab;
+            user-select: none;
+        }
+
+        .carousel :where(.card, .img) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .carousel .card {
+            scroll-snap-align: start;
+            height: 242px;
+            list-style: none;
+            background: #fff;
+            cursor: pointer;
+            margin: 20px 0;
+            padding-bottom: 15px;
+            flex-direction: column;
+            border-radius: 8px;
+        }
+
+        .carousel .card .img {
+            background: #8B53FF;
+            height: 148px;
+            width: 148px;
+            border-radius: 50%;
+        }
+
+        .card .img img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #fff;
+        }
+
+        .carousel .card h2 {
+            font-weight: 500;
+            font-size: 1.56rem;
+            margin: 30px 0 5px;
+        }
+
+        .carousel .card span {
+            color: #6A6D78;
+            font-size: 1.31rem;
+        }
+
+
+        @media screen and (max-width: 900px) {
+            .wrapper .carousel {
+                grid-auto-columns: calc((100% / 2) - 9px);
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .wrapper .carousel {
+                grid-auto-columns: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="animatedcontainer1 ">
+        <div class="blur ">
+            <div class="ball">
+                <div class="containmemeberabsolute">
+                    <div class="titelmembers d-flex justify-content-center">
+                        <span class="hh hhh">Select your roll</span>
+                        <div class="iconexitemember hhh d-flex justify-content-center">
+                            <i class="fa-regular  btnx fa-circle-xmark"></i>
+                        </div>
+                    </div>
+                    <div class="boxesmember d-flex justify-content-around">
+                        <div class="boxmember dmbox shadow">
+                            <img src="storage/photos/members/departmenthead.png" class=" dmphoto studentphoto" alt="">
+                            <div class="titelmembername textdm d-flex justify-content-center">
+                                Department head
+                            </div>
+                            <div class="btntologin d-flex justify-content-center">
+                                <a href="login">
+                                    <button class="loginbtn loginbtnonly dmbtn">Login</button>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="boxmember bxst shadow">
+                            <img src="storage/photos/members/studentmember.png" class="studentphoto st" alt="">
+                            <div class="titelmembername stt  d-flex justify-content-center">
+                                Student
+                            </div>
+                            <div class="btnsregisterandlogin d-flex justify-content-center">
+                                <div class="btntologin1 loginbtncont d-flex registerone justify-content-center">
+                                    <a href="login">
+                                        <button class="loginbtn studentbtn registerbtnconfirm">Login</button>
+                                    </a>
+                                </div>
+                                <div class="btntologin1 d-flex registerone justify-content-center">
+                                    <a href="register">
+                                        <button class="loginbtn studentbtn registerbtnconfirm">Register</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="boxmember isbox shadow">
+                            <img src="storage/photos/members/internshipspuervisor (1).png" class="studentphoto isphoto"
+                                alt="">
+                            <div class="titelmembername textdm d-flex justify-content-center">
+                                Internship supervisor
+                            </div>
+                            <div class="btntologin d-flex justify-content-center">
+                                <a href="login">
+                                    <button class="loginbtn loginbtnonly dmbtn">Login</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="animatedcontainer "></div>
+    <div class="animatedcontent d-flex justify-content-around ">
+        <div class="animatedlogo ">
+            <svg width="160" height="150" viewBox="0 0 193 236" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="Group13">
+                    <path id="uplogo"
+                        d="M0 110.782L104.442 0.000140763L125.693 20.0347C141.767 35.189 142.513 60.5046 127.359 76.5787L50.3554 158.256L0 110.782Z"
+                        fill="#36615A" />
+                    <path id="downlogo"
+                        d="M66.3636 215.965C50.2894 200.811 49.5438 175.495 64.698 159.421L141.701 77.7443L192.057 125.218L87.6142 236L66.3636 215.965Z"
+                        fill="#7C8D8A" />
+                </g>
+            </svg>
+        </div>
+        <div class="logonamecontainer">
+            <h2 class="logoname">INTERNHITCH</h2>
+        </div>
+    </div>
+
+
+    <div class="containersectionall">
+        <div class="contain">
+            <!-- home page section -->
+            <div class="homepage">
+                <div class="menu">
+                    <div class="navbar d-flex justify-content-around">
+                        <div class="logi">
+                            <svg width="150" height="50" viewBox="0 0 217 50" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g id="logoandname">
+                                    <g id="logo">
+                                        <path id="INTERHITCH"
+                                            d="M55.7706 13.8182V32H51.3761V13.8182H55.7706ZM74.0035 13.8182V32H70.2748L63.0393 21.5064H62.9239V32H58.5294V13.8182H62.3113L69.4669 24.294H69.6178V13.8182H74.0035ZM76.1719 17.3871V13.8182H91.5394V17.3871H86.0263V32H81.6939V17.3871H76.1719ZM93.6856 32V13.8182H106.363V17.3871H98.0802V21.1158H105.715V24.6935H98.0802V28.4311H106.363V32H93.6856ZM109.115 32V13.8182H116.626C117.987 13.8182 119.162 14.0638 120.15 14.555C121.145 15.0404 121.911 15.7388 122.45 16.6502C122.988 17.5558 123.258 18.63 123.258 19.8729C123.258 21.1335 122.983 22.2048 122.432 23.0866C121.882 23.9626 121.1 24.6314 120.088 25.093C119.076 25.5488 117.878 25.7766 116.493 25.7766H111.743V22.3143H115.676C116.339 22.3143 116.892 22.2285 117.336 22.0568C117.786 21.8793 118.126 21.6129 118.357 21.2578C118.588 20.8968 118.703 20.4351 118.703 19.8729C118.703 19.3106 118.588 18.846 118.357 18.479C118.126 18.1062 117.786 17.828 117.336 17.6445C116.886 17.4551 116.333 17.3604 115.676 17.3604H113.51V32H109.115ZM119.351 23.6903L123.879 32H119.085L114.646 23.6903H119.351ZM125.668 32V13.8182H130.063V21.1158H137.227V13.8182H141.613V32H137.227V24.6935H130.063V32H125.668ZM148.764 13.8182V32H144.369V13.8182H148.764ZM150.928 17.3871V13.8182H166.295V17.3871H160.782V32H156.45V17.3871H150.928ZM184.115 20.4055H179.676C179.617 19.9498 179.496 19.5385 179.312 19.1715C179.129 18.8046 178.886 18.4909 178.584 18.2305C178.283 17.9701 177.925 17.7718 177.51 17.6357C177.102 17.4936 176.649 17.4226 176.152 17.4226C175.27 17.4226 174.509 17.6386 173.87 18.0707C173.237 18.5027 172.749 19.1271 172.405 19.9439C172.068 20.7607 171.899 21.7491 171.899 22.9091C171.899 24.1165 172.071 25.1286 172.414 25.9453C172.764 26.7562 173.252 27.3687 173.879 27.783C174.512 28.1914 175.261 28.3956 176.125 28.3956C176.611 28.3956 177.052 28.3335 177.448 28.2092C177.851 28.0849 178.203 27.9044 178.505 27.6676C178.812 27.425 179.064 27.132 179.259 26.7887C179.46 26.4395 179.599 26.0459 179.676 25.608L184.115 25.6346C184.038 26.4395 183.805 27.2326 183.414 28.0138C183.029 28.7951 182.5 29.5083 181.825 30.1534C181.15 30.7926 180.327 31.3016 179.357 31.6804C178.392 32.0592 177.285 32.2486 176.036 32.2486C174.391 32.2486 172.917 31.8875 171.615 31.1655C170.319 30.4375 169.295 29.3781 168.544 27.9872C167.792 26.5964 167.416 24.9036 167.416 22.9091C167.416 20.9086 167.798 19.2129 168.561 17.8221C169.325 16.4312 170.358 15.3748 171.66 14.6527C172.962 13.9306 174.421 13.5696 176.036 13.5696C177.137 13.5696 178.155 13.7235 179.09 14.0312C180.026 14.3331 180.848 14.777 181.559 15.3629C182.269 15.9429 182.846 16.6561 183.29 17.5025C183.734 18.3488 184.009 19.3165 184.115 20.4055ZM186.63 32V13.8182H191.025V21.1158H198.189V13.8182H202.575V32H198.189V24.6935H191.025V32H186.63Z"
+                                            fill="#36615A" />
+                                    </g>
+                                    <g id="Group 13">
+                                        <path id="Rectangle 5"
+                                            d="M0 23.0726L21.7523 -2.24155e-05C27.5445 5.46065 27.8132 14.5828 22.3525 20.375L10.4876 32.9601L0 23.0726Z"
+                                            fill="#36615A" />
+                                        <path id="Rectangle 6"
+                                            d="M18.2477 49.152C12.4555 43.6913 12.1869 34.5691 17.6475 28.777L29.5124 16.1919L40 26.0793L18.2477 49.152Z"
+                                            fill="#7C8D8A" />
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                        <ul class="homepagelist d-flex justify-content-center">
+                            <a href="#">
+                                <li class="nav">Home</li>
+                            </a>
+                            <a href="#servicepage">
+                                <li class="nav">Services</li>
+                            </a>
+                            <a href="#categorysection">
+                                <li class="nav">Categories</li>
+                            </a>
+                            <a href="#aboutussection">
+                                <li class="nav">About us</li>
+                            </a>
+                        </ul>
+                        <div class="getstarted">
+                            <button class="btn btn-success getstartbtn">Get started</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="another d-flex justify-content-center">
+                    <div class="decribtext">
+                        <h2 class="summary">
+                            We provide great internships & adding the word called
+                            <span class="success">success</span> to your life
+                        </h2>
+                        <h6 class="minitext anothertextforhomepage">
+                            trust us and you will have the entire oppertunities up on your
+                            hands what are you waiting for join us
+                        </h6>
+                    </div>
+                </div>
+                <div class="pictures">
+                    <div class="starulsection">
+                        <div class="starhomepage">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path id="Star 1"
+                                    d="M23.0093 1.19628C23.1679 0.0447888 24.8321 0.0447888 24.9907 1.19628L26.8667 14.824C26.971 15.5814 27.8521 15.9464 28.4614 15.4845L39.4242 7.17487C40.3506 6.47273 41.5274 7.64955 40.8252 8.57587L32.5156 19.5387C32.0537 20.148 32.4187 21.0291 33.1761 21.1334L46.8038 23.0095C47.9553 23.168 47.9553 24.8323 46.8038 24.9908L33.1761 26.8668C32.4187 26.9711 32.0537 27.8522 32.5156 28.4616L40.8253 39.4244C41.5274 40.3507 40.3506 41.5275 39.4243 40.8254L28.4614 32.5157C27.8521 32.0539 26.971 32.4188 26.8667 33.1763L24.9907 46.804C24.8321 47.9555 23.1679 47.9555 23.0093 46.804L21.1333 33.1763C21.029 32.4188 20.1479 32.0539 19.5386 32.5157L8.57575 40.8254C7.64943 41.5275 6.47261 40.3507 7.17475 39.4244L15.4844 28.4616C15.9463 27.8522 15.5813 26.9711 14.8239 26.8668L1.19616 24.9908C0.0446668 24.8323 0.0446668 23.168 1.19616 23.0095L14.8239 21.1334C15.5813 21.0291 15.9463 20.148 15.4844 19.5387L7.17475 8.57587C6.47261 7.64955 7.64943 6.47273 8.57575 7.17487L19.5386 15.4846C20.1479 15.9464 21.029 15.5814 21.1333 14.824L23.0093 1.19628Z"
+                                    fill="#F97F2A" />
+                            </svg>
+                        </div>
+                        <div class="centerulhompage">
+                            <ul class="sevices">
+                                <li class="nish">Biology</li>
+                                <li class="nish">Computer science</li>
+                                <li class="nish">Economy science</li>
+                                <li class="nish">Physics</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="towpics d-flex justify-content-between">
+                        <div class="pic1 appearpics">
+                            <div>
+                                <img src="storage/photos/homepage/ka7loshi.jpg" class="image1" alt="">
+                            </div>
+                            <div class="watch shadow">
+                                <svg width="53" height="53" viewBox="0 0 68 65" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g id="watwh">
+                                        <g id="Group 2">
+                                            <ellipse id="Ellipse 2" cx="34" cy="32.5" rx="34" ry="32.5" fill="white" />
+                                            <g id="Group">
+                                                <path id="t"
+                                                    d="M38.4833 57.7797L38.3334 57.0855L41.0964 56.4889L41.2463 57.1831L38.4833 57.7797ZM40.7168 58.6344L39.8976 58.8113L38.8004 53.7295C38.7504 53.4981 38.6794 53.3318 38.5873 53.2306C38.4934 53.1322 38.389 53.0748 38.274 53.0585C38.1573 53.0449 38.0387 53.0511 37.9184 53.0771C37.8281 53.0966 37.7551 53.1172 37.6992 53.139C37.6439 53.163 37.5996 53.1823 37.5664 53.1967L37.2409 52.4968C37.2919 52.464 37.365 52.4264 37.46 52.3841C37.5545 52.3395 37.6781 52.3007 37.8308 52.2677C38.0622 52.2177 38.2998 52.2185 38.5434 52.2701C38.7847 52.3221 39.0003 52.4342 39.19 52.6064C39.3775 52.779 39.5047 53.0204 39.5716 53.3305L40.7168 58.6344Z"
+                                                    fill="black" />
+                                                <path id="u"
+                                                    d="M25.1288 54.0489L24.2003 57.1367L23.3977 56.8954L24.9685 51.6719L25.771 51.9133L25.5052 52.7974L25.5596 52.8138C25.7618 52.5854 26.02 52.4171 26.3344 52.3089C26.6481 52.2029 27.0021 52.2093 27.3966 52.3279C27.7231 52.4261 27.9918 52.5848 28.2028 52.804C28.4131 53.0254 28.5471 53.3031 28.605 53.6369C28.6621 53.973 28.6239 54.3632 28.4902 54.8076L27.4922 58.1266L26.6896 57.8853L27.6713 54.6206C27.7859 54.2398 27.7707 53.9039 27.6257 53.6131C27.4785 53.3216 27.2383 53.1258 26.905 53.0256C26.7055 52.9656 26.4873 52.9556 26.2503 52.9955C26.011 53.0348 25.7894 53.1388 25.5854 53.3074C25.3792 53.4753 25.227 53.7224 25.1288 54.0489Z"
+                                                    fill="black" />
+                                                <path id="n"
+                                                    d="M16.9564 50.6499L19.303 48.3565L19.8888 48.9559L15.9878 52.7683L15.4219 52.1893L16.0315 51.5936L15.9818 51.5428C15.6944 51.6449 15.3995 51.6616 15.0973 51.5929C14.7934 51.5258 14.4975 51.3449 14.2095 51.0503C13.9514 50.7862 13.7797 50.5021 13.6945 50.1981C13.6075 49.8958 13.6195 49.5829 13.7304 49.2594C13.8395 48.9375 14.06 48.6144 14.3919 48.2901L16.8706 45.8676L17.4564 46.467L15.0183 48.8498C14.7118 49.1493 14.5509 49.4621 14.5354 49.7884C14.5183 50.1164 14.6454 50.4192 14.9167 50.6968C15.1037 50.8881 15.3123 51.0186 15.5426 51.0882C15.7711 51.1561 16.0072 51.1555 16.2507 51.0863C16.4943 51.0171 16.7295 50.8717 16.9564 50.6499Z"
+                                                    fill="black" />
+                                                <path id="i"
+                                                    d="M13.4441 40.5011L8.18595 41.9516L7.9631 41.1437L13.2213 39.6932L13.4441 40.5011ZM7.19628 41.7825C7.23972 41.94 7.22354 42.0906 7.14776 42.2343C7.07134 42.3757 6.95782 42.4672 6.8072 42.5087C6.65657 42.5503 6.5122 42.5299 6.37409 42.4477C6.23535 42.3632 6.14427 42.2422 6.10083 42.0847C6.05739 41.9272 6.07388 41.7778 6.15029 41.6364C6.22608 41.4927 6.33928 41.4001 6.48991 41.3585C6.64053 41.317 6.78521 41.3384 6.92395 41.423C7.06206 41.5052 7.15284 41.6251 7.19628 41.7825Z"
+                                                    fill="black" />
+                                                <path id="t_2"
+                                                    d="M7.15268 27.0536L7.84328 27.2194L7.18343 29.968L6.49282 29.8022L7.15268 27.0536ZM5.41443 28.696L5.61006 27.8811L10.6653 29.0947C10.8955 29.15 11.0762 29.1581 11.2073 29.1189C11.3367 29.0769 11.4336 29.0077 11.4982 28.9112C11.561 28.8119 11.6068 28.7023 11.6355 28.5826C11.6571 28.4928 11.6701 28.4181 11.6747 28.3583C11.6771 28.298 11.6789 28.2497 11.6803 28.2136L12.4521 28.2236C12.4596 28.2838 12.4618 28.3659 12.4587 28.4698C12.458 28.5743 12.4394 28.7026 12.4029 28.8545C12.3476 29.0847 12.244 29.2984 12.0919 29.4956C11.9405 29.6906 11.746 29.8362 11.5086 29.9326C11.2718 30.0267 10.9991 30.0367 10.6907 29.9627L5.41443 28.696Z"
+                                                    fill="black" />
+                                                <path id="y"
+                                                    d="M17.2129 21.619C17.1089 21.7158 17.0081 21.7933 16.9105 21.8518C16.8145 21.9119 16.7436 21.9487 16.6979 21.9621L16.351 21.2761C16.5356 21.1756 16.6802 21.067 16.785 20.9502C16.8897 20.8334 16.9436 20.6879 16.9466 20.5138C16.9529 20.3398 16.8991 20.1167 16.785 19.8446L16.6093 19.4261L11.3987 16.784L12.0645 16.165L16.1268 18.323L16.1684 18.2844L14.3115 14.0758L14.9773 13.4568L17.5373 19.6106C17.6529 19.8879 17.7171 20.1465 17.7302 20.3866C17.7448 20.6283 17.7082 20.8514 17.6204 21.056C17.5343 21.2589 17.3984 21.4466 17.2129 21.619Z"
+                                                    fill="black" />
+                                                <path id="!!"
+                                                    d="M26.0816 5.54461L26.9429 10.7009L26.1323 10.8477L25.1311 5.71669L26.0816 5.54461ZM26.9121 12.8429C26.7397 12.8742 26.5806 12.8392 26.4348 12.7381C26.289 12.637 26.2005 12.5002 26.1693 12.3278C26.1381 12.1555 26.173 11.9964 26.2741 11.8505C26.3752 11.7047 26.512 11.6162 26.6844 11.585C26.8568 11.5538 27.0159 11.5887 27.1617 11.6898C27.3075 11.791 27.396 11.9277 27.4272 12.1001C27.4479 12.2142 27.4378 12.3243 27.3968 12.4304C27.3582 12.536 27.2964 12.6266 27.2114 12.7021C27.1284 12.7749 27.0286 12.8219 26.9121 12.8429ZM28.8202 5.04877L29.6816 10.2051L28.8709 10.3518L27.8698 5.22085L28.8202 5.04877ZM29.6508 12.3471C29.4784 12.3783 29.3193 12.3434 29.1735 12.2423C29.0277 12.1411 28.9392 12.0044 28.908 11.832C28.8767 11.6596 28.9117 11.5005 29.0128 11.3547C29.1139 11.2089 29.2507 11.1204 29.4231 11.0891C29.5954 11.0579 29.7545 11.0929 29.9004 11.194C30.0462 11.2951 30.1347 11.4319 30.1659 11.6042C30.1866 11.7184 30.1764 11.8285 30.1355 11.9346C30.0969 12.0402 30.0351 12.1308 29.9501 12.2063C29.8671 12.2791 29.7673 12.326 29.6508 12.3471Z"
+                                                    fill="black" />
+                                                <path id="o"
+                                                    d="M44.2475 15.975C43.8464 15.6894 43.5624 15.3433 43.3956 14.9368C43.2307 14.5317 43.1856 14.0971 43.2603 13.633C43.3369 13.1702 43.5387 12.7094 43.8655 12.2504C44.195 11.7875 44.5666 11.4432 44.9801 11.2175C45.3957 10.9931 45.8218 10.8926 46.2586 10.9159C46.6973 10.9405 47.1172 11.0957 47.5184 11.3813C47.9195 11.6669 48.2025 12.0123 48.3674 12.4174C48.5343 12.8239 48.5787 13.2595 48.5007 13.7242C48.4246 14.1902 48.2218 14.6546 47.8922 15.1175C47.5654 15.5765 47.1949 15.9172 46.7808 16.1396C46.3686 16.3634 45.9432 16.463 45.5044 16.4384C45.0676 16.4151 44.6487 16.2606 44.2475 15.975ZM44.6842 15.3617C44.9889 15.5787 45.2952 15.6791 45.6032 15.663C45.9111 15.6468 46.2029 15.5451 46.4787 15.3578C46.7544 15.1705 46.9981 14.9284 47.2095 14.6314C47.421 14.3344 47.5708 14.024 47.6589 13.7002C47.747 13.3765 47.749 13.0655 47.6649 12.7673C47.5808 12.4691 47.3864 12.2115 47.0817 11.9946C46.777 11.7776 46.47 11.6782 46.1607 11.6962C45.8514 11.7143 45.5582 11.818 45.281 12.0072C45.0039 12.1964 44.7596 12.4395 44.5482 12.7365C44.3367 13.0335 44.1876 13.3429 44.1008 13.6647C44.0141 13.9866 44.0134 14.2956 44.0989 14.5919C44.1844 14.8882 44.3795 15.1448 44.6842 15.3617Z"
+                                                    fill="black" />
+                                                <path id="p"
+                                                    d="M47.6151 21.7732L54.2681 18.3109L54.6419 19.0291L53.8732 19.4291L53.9191 19.5173C54.0316 19.5282 54.178 19.548 54.3585 19.5769C54.5421 19.6067 54.733 19.6862 54.931 19.8154C55.1321 19.9455 55.3147 20.1681 55.4786 20.4831C55.6907 20.8905 55.7757 21.3027 55.7337 21.7195C55.6918 22.1363 55.5293 22.5291 55.2462 22.898C54.9631 23.2668 54.5674 23.5835 54.0592 23.848C53.5468 24.1146 53.0573 24.2586 52.5906 24.28C52.1261 24.3002 51.7106 24.2095 51.3442 24.0079C50.9798 23.8052 50.6927 23.5023 50.4829 23.0991C50.3211 22.7882 50.2431 22.5126 50.2487 22.2722C50.2564 22.0306 50.3002 21.825 50.38 21.6553C50.462 21.4846 50.5329 21.349 50.5926 21.2485L50.5599 21.1855L48.002 22.5166L47.6151 21.7732ZM52.2291 20.3007C51.8637 20.4909 51.5692 20.7122 51.3457 20.9647C51.1242 21.216 50.9883 21.4856 50.9379 21.7734C50.8896 22.0601 50.943 22.3525 51.0982 22.6507C51.26 22.9615 51.4768 23.1782 51.7489 23.3009C52.024 23.4246 52.3286 23.4662 52.6626 23.4259C52.9997 23.3865 53.3405 23.2772 53.6849 23.098C54.0251 22.9209 54.3044 22.7089 54.5228 22.4618C54.7443 22.2157 54.8803 21.9461 54.9306 21.6531C54.9841 21.361 54.9289 21.0575 54.7649 20.7425C54.6075 20.4401 54.3986 20.2259 54.1382 20.0998C53.8799 19.9727 53.5869 19.9277 53.2593 19.9648C52.9337 20.0008 52.5904 20.1127 52.2291 20.3007Z"
+                                                    fill="black" />
+                                                <path id="p_2"
+                                                    d="M50.7737 30.3212L58.2538 29.7759L58.3127 30.5834L57.4485 30.6464L57.4558 30.7455C57.5547 30.8 57.6813 30.8763 57.8356 30.9742C57.9925 31.0743 58.1362 31.2229 58.2669 31.4199C58.4001 31.6191 58.4796 31.8957 58.5054 32.2499C58.5388 32.708 58.4538 33.1201 58.2502 33.4862C58.0467 33.8524 57.7419 34.1488 57.3359 34.3754C56.9299 34.602 56.4412 34.7361 55.8698 34.7778C55.2937 34.8198 54.7871 34.7582 54.3502 34.5931C53.9156 34.4277 53.57 34.18 53.3133 33.8497C53.059 33.5193 52.9153 33.1275 52.8822 32.6741C52.8567 32.3247 52.8942 32.0407 52.9945 31.8221C53.0973 31.6033 53.2189 31.4319 53.3594 31.3077C53.5022 31.1833 53.621 31.0869 53.7157 31.0182L53.7105 30.9474L50.8346 31.1571L50.7737 30.3212ZM55.5937 30.7959C55.1829 30.8258 54.8248 30.9124 54.5196 31.0558C54.2167 31.1989 53.9851 31.3926 53.8249 31.6369C53.667 31.8811 53.6003 32.1708 53.6248 32.5061C53.6503 32.8555 53.7636 33.1404 53.9648 33.3607C54.1686 33.5832 54.4318 33.7421 54.7544 33.8372C55.0796 33.9346 55.4358 33.9691 55.823 33.9409C56.2055 33.913 56.5459 33.8289 56.8443 33.6884C57.1452 33.5502 57.3767 33.3565 57.539 33.1073C57.7037 32.8602 57.7732 32.5597 57.7474 32.2055C57.7226 31.8655 57.6156 31.5861 57.4263 31.3672C57.2395 31.1482 56.9882 30.9909 56.6727 30.8952C56.3595 30.7994 55.9998 30.7662 55.5937 30.7959Z"
+                                                    fill="black" />
+                                                <path id="e"
+                                                    d="M51.7927 38.9589C51.9651 38.4624 52.2235 38.0722 52.5677 37.7883C52.9134 37.5074 53.3179 37.3384 53.7813 37.2813C54.2462 37.2272 54.7425 37.2918 55.2703 37.4751C55.7981 37.6585 56.2299 37.9162 56.5656 38.2483C56.9028 38.5835 57.1242 38.9636 57.2296 39.3887C57.3366 39.8168 57.3093 40.2634 57.1477 40.7286C57.0545 40.997 56.9177 41.2464 56.7374 41.477C56.5571 41.7076 56.329 41.8953 56.0531 42.0401C55.7795 42.1856 55.4562 42.2651 55.0832 42.2784C54.7102 42.2916 54.2832 42.2148 53.8024 42.0478L53.467 41.9313L54.8465 37.9595L55.5308 38.1972L54.4309 41.3639C54.7217 41.4648 55.0013 41.4968 55.2698 41.4597C55.5375 41.4249 55.7742 41.3242 55.98 41.1576C56.1849 40.9932 56.3371 40.7678 56.4365 40.4816C56.5461 40.1663 56.5625 39.8662 56.486 39.5815C56.4109 39.2998 56.2706 39.0543 56.0651 38.8451C55.8596 38.6359 55.6148 38.482 55.3308 38.3833L54.8746 38.2249C54.4854 38.0897 54.1323 38.0422 53.8151 38.0824C53.4993 38.1256 53.2291 38.2436 53.0043 38.4361C52.7817 38.6295 52.6149 38.8861 52.5039 39.2059C52.4316 39.4139 52.3954 39.6118 52.3953 39.7998C52.3967 39.9907 52.4353 40.1683 52.5111 40.3324C52.5891 40.4974 52.7059 40.6445 52.8616 40.7737L52.3812 41.464C52.1498 41.2933 51.9686 41.0788 51.8379 40.8204C51.7093 40.5627 51.6388 40.2751 51.6263 39.9575C51.6161 39.6406 51.6715 39.3078 51.7927 38.9589Z"
+                                                    fill="black" />
+                                                <path id="r"
+                                                    d="M48.2879 45.8038L51.998 49.8021L51.4045 50.3529L50.8441 49.7489L50.8025 49.7876C50.9132 50.0531 50.9302 50.336 50.8537 50.6363C50.7771 50.9367 50.6191 51.198 50.3796 51.4202C50.3345 51.462 50.2773 51.5135 50.208 51.5746C50.1387 51.6356 50.0851 51.6805 50.0472 51.7093L49.4675 51.0845C49.4931 51.0704 49.5481 51.0339 49.6324 50.9751C49.7165 50.9196 49.7994 50.854 49.881 50.7784C50.0753 50.598 50.211 50.3962 50.288 50.1729C50.365 49.953 50.3816 49.7308 50.3381 49.5064C50.2944 49.2853 50.1889 49.0845 50.0214 48.904L47.6736 46.3738L48.2879 45.8038Z"
+                                                    fill="black" />
+                                            </g>
+                                        </g>
+                                        <g id="start">
+                                            <path id="Polygon 1"
+                                                d="M39.975 30.785C41.2697 31.5618 41.2697 33.4382 39.975 34.215L30.029 40.1826C28.6959 40.9824 27 40.0222 27 38.4676L27 26.5324C27 24.9778 28.6959 24.0176 30.029 24.8174L39.975 30.785Z"
+                                                fill="#F97F2A" />
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="pic2 appearpics">
+                            <div>
+                                <img src="storage/photos/homepage/annie-spratt-MChSQHxGZrQ-unsplash.jpeg" class="image2"
+                                    alt="">
+                            </div>
+                            <div class="boxes">
+                                <div class="box1 boxanimated">
+                                    <div class="oxtext shadow">
+                                        Achieve more
+                                        <span class="iconshomepage">
+                                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g id="arrowup 1" clip-path="url(#clip0_69_85)">
+                                                    <path id="Vector"
+                                                        d="M12.25 8L14.2581 10.0081L9.98812 14.2738L6.48812 10.7738L0 17.2619L1.23812 18.5L6.48812 13.25L9.98812 16.75L15.4919 11.2419L17.5 13.25V8H12.25Z"
+                                                        fill="#D68438" />
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_69_85">
+                                                        <rect width="21" height="21" fill="white" />
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="box2 boxanimated">
+                                    <div class="oxtext shadow">
+                                        acquire a skill
+                                        <span class="iconshomepage">
+                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_69_93)">
+                                                    <path
+                                                        d="M6 0.5C2.95 0.5 0.5 2.95 0.5 6C0.5 9.05 2.95 11.5 6 11.5C9.05 11.5 11.5 9.05 11.5 6C11.5 2.95 9.05 0.5 6 0.5ZM8.5 7H7V8.5C7 9.05 6.55 9.5 6 9.5C5.45 9.5 5 9.05 5 8.5V7H3.5C2.95 7 2.5 6.55 2.5 6C2.5 5.45 2.95 5 3.5 5H5V3.5C5 2.95 5.45 2.5 6 2.5C6.55 2.5 7 2.95 7 3.5V5H8.5C9.05 5 9.5 5.45 9.5 6C9.5 6.55 9.05 7 8.5 7Z"
+                                                        fill="#D68438" />
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_69_93">
+                                                        <rect width="12" height="12" fill="white" />
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- services section -->
+            <div id="servicepage" class="servicepage">
+                <div class="centermyboxofwhatwzoffer">
+                    <div class="servicesbox">
+                        <div class="col">
+                            <div class="row">
+                                <div class="why titwyhanime">Why work with us & what we offer ?</div>
+                                <div class="towbtns d-flex justify-content-center">
+                                    <button class="over btnoveranimate">Overview</button>
+                                    <a href="#aboutussection"><button class="over btnoveranimate">All what we
+                                            offer</button></a>
+                                </div>
+                                <div class="theline">
+                                    <svg width="378" height="2" viewBox="0 0 388 2" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <line x1="0.00128574" y1="0.500002" x2="387.001" y2="1.49517"
+                                            stroke="#7E7676" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="row leftsideservice">
+                                <div class="decpart">
+                                    <div class="why textkifkif ano">Decription</div>
+                                    <div class="descripotiondetails textkifkif">
+                                        We foster exceptional internships, cultivating the pathway to success,
+                                        augmenting life's provisions through diverse themes
+                                    </div>
+                                </div>
+                                <div class="towboxeswhatweoffer  d-flex justify-content-between">
+                                    <div class="boxwhatewoffer">
+                                        <div class="iconwhahatweoffer">
+                                            <svg width="40" height="41" viewBox="0 0 60 41" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect width="60" height="41" rx="10" fill="#FA803A" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M17.8125 20.1875V15.3058C17.8125 14.8699 18.1733 14.5 18.6183 14.5H27.075L28.6675 17.75H38.9351C39.3813 17.75 39.75 18.1141 39.75 18.5632V20.1875H17.8125ZM17.8125 21V29.9442C17.8125 30.3892 18.175 30.75 18.6193 30.75H38.9432C39.3888 30.75 39.75 30.3887 39.75 29.9368V21H17.8125ZM19.4375 12.875V12.0553C19.4375 11.1604 20.166 10.4375 21.0647 10.4375H30L31.625 13.6875H41.3702C42.2711 13.6875 43 14.4133 43 15.3085V26.6915C43 27.5872 42.2749 28.3125 41.3805 28.3125H41.375V27.5H41.3807C41.8263 27.5 42.1875 27.1387 42.1875 26.6868V15.3132C42.1875 14.8641 41.8188 14.5 41.3726 14.5H31.105L29.5125 11.25H21.0558C20.6108 11.25 20.25 11.6199 20.25 12.0558V12.875H19.4375ZM29.1875 16.9375L27.5625 13.6875H18.6272C17.7285 13.6875 17 14.4104 17 15.3053V29.9447C17 30.8382 17.731 31.5625 18.6195 31.5625H38.943C39.8374 31.5625 40.5625 30.8372 40.5625 29.9415V18.5585C40.5625 17.6633 39.8336 16.9375 38.9327 16.9375H29.1875Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </div>
+                                        <div class="minitext decmini">
+                                            We provide great internships & adding the word called
+                                            <span class="success">success</span> to your life
+                                        </div>
+                                    </div>
+                                    <div class="boxwhatewoffer">
+                                        <div class="iconwg=hatweoffer">
+                                            <svg width="40" height="41" viewBox="0 0 60 41" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect width="60" height="41" rx="10" fill="#FA803A" />
+                                                <g clip-path="url(#clip0_74_111)">
+                                                    <path
+                                                        d="M37.4 19.2C37.4 15.2235 34.1765 12 30.2 12C26.2235 12 23 15.2235 23 19.2C23 22.0254 24.6314 24.4638 27 25.6427V30.4H28.6V32H31.8V30.4H33.4V25.6427C35.7686 24.4638 37.4 22.0254 37.4 19.2Z"
+                                                        stroke="white" stroke-width="2" stroke-miterlimit="10"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                    <path d="M30.2 8V9.6" stroke="white" stroke-width="2"
+                                                        stroke-miterlimit="10" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path d="M22.2804 11.2804L23.4118 12.4118" stroke="white"
+                                                        stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path d="M19 19.2H20.6" stroke="white" stroke-width="2"
+                                                        stroke-miterlimit="10" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path d="M41.4 19.2H39.8" stroke="white" stroke-width="2"
+                                                        stroke-miterlimit="10" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path d="M38.1196 11.2804L36.9883 12.4118" stroke="white"
+                                                        stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path d="M32.6 19.2L30.2 18.4V20L27.8 19.2" stroke="white"
+                                                        stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_74_111">
+                                                        <rect width="32" height="32" fill="white"
+                                                            transform="translate(10)" />
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </div>
+                                        <div class="minitext decmini">
+                                            We provide great internships & adding the word called
+                                            <span class="success">success</span> to your life
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="rightsideboxeswhatweoffer d-flex justify-content-center">
+                                <div class="row">
+                                    <div class="col-3 bow1whatweofferrightside">
+                                        <div class="myeditwhatweoffer">
+                                            Join our thriving community and unlock a world of exceptional
+                                        </div>
+                                        <img src="storage/photos/homepage/pic.png" class="userimages" alt="" />
+                                        <div class="iconpluswhatweoffer">
+                                            <svg width="23" height="23" viewBox="0 0 23 23" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect y="9" width="23" height="5" rx="2.5" fill="#F97F2A" />
+                                                <rect x="14" width="23" height="5" rx="2.5" transform="rotate(90 14 0)"
+                                                    fill="#F97F2A" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="col-5 bow2whatweofferrightside">
+                                        <div class="severalinternshiponyourhands">
+                                            Several internships on your hands
+                                        </div>
+                                        <div class="selectbycategory d-flex justify-content-between">
+                                            <a href="#categorysection">
+                                                <button class="abdoubtn">SELECT BY CATEGORY</button>
+                                            </a>
+                                            <div class="starbesidebtn">
+                                                <svg width="20" height="20" viewBox="0 0 48 48" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path id="Star 1"
+                                                        d="M23.0093 1.19628C23.1679 0.0447888 24.8321 0.0447888 24.9907 1.19628L26.8667 14.824C26.971 15.5814 27.8521 15.9464 28.4614 15.4845L39.4242 7.17487C40.3506 6.47273 41.5274 7.64955 40.8252 8.57587L32.5156 19.5387C32.0537 20.148 32.4187 21.0291 33.1761 21.1334L46.8038 23.0095C47.9553 23.168 47.9553 24.8323 46.8038 24.9908L33.1761 26.8668C32.4187 26.9711 32.0537 27.8522 32.5156 28.4616L40.8253 39.4244C41.5274 40.3507 40.3506 41.5275 39.4243 40.8254L28.4614 32.5157C27.8521 32.0539 26.971 32.4188 26.8667 33.1763L24.9907 46.804C24.8321 47.9555 23.1679 47.9555 23.0093 46.804L21.1333 33.1763C21.029 32.4188 20.1479 32.0539 19.5386 32.5157L8.57575 40.8254C7.64943 41.5275 6.47261 40.3507 7.17475 39.4244L15.4844 28.4616C15.9463 27.8522 15.5813 26.9711 14.8239 26.8668L1.19616 24.9908C0.0446668 24.8323 0.0446668 23.168 1.19616 23.0095L14.8239 21.1334C15.5813 21.0291 15.9463 20.148 15.4844 19.5387L7.17475 8.57587C6.47261 7.64955 7.64943 6.47273 8.57575 7.17487L19.5386 15.4846C20.1479 15.9464 21.029 15.5814 21.1333 14.824L23.0093 1.19628Z"
+                                                        fill="#F97F2A" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="conatinswip">
+                                    <div class="swiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="storage/photos/internshipcontent/Frame 112 (1).png"
+                                                    class="myimg" alt="" />
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="photos/internshipcontent/Frame 112.png" class="myimg"
+                                                    alt="" />
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="photos/internshipcontent/Frame 140.png" class="myimg"
+                                                    alt="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- categories section -->
+            <div id="categorysection" class="categorysection">
+                <div class="centerunderline d-flex justify-content-center">
+                    <div class="titelcategory">
+                        <h1 class="head">SELECT BY CATEGORIES</h1>
+                        <div class="underline">
+                            <svg width="327" height="9" viewBox="0 0 327 9" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g id="underline">
+                                    <g id="Group 1">
+                                        <line id="Line 2" y1="4.5" x2="141" y2="4.5" stroke="black" />
+                                        <line id="Line 3" x1="186" y1="5.5" x2="327" y2="5.5" stroke="black" />
+                                        <circle id="Ellipse 14" cx="163.5" cy="4.5" r="4.5" fill="black" />
+                                        <circle id="Ellipse 17" cx="145.5" cy="4.5" r="2.5" fill="black" />
+                                        <circle id="Ellipse 16" cx="153.5" cy="4.5" r="3.5" fill="black" />
+                                        <circle id="Ellipse 15" cx="173.5" cy="4.5" r="3.5" fill="black" />
+                                        <circle id="Ellipse 18" cx="181.5" cy="4.5" r="2.5" fill="black" />
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="categoriesgrid">
+                    <div class="cardscategory d-flex justify-content-center">
+                        <div class="row">
+                            <div class="col categoryboxex">
+                                <a href="#">
+                                    <div class="categorybox">
+                                        <img src="storage/photos/homepage/homecategory/computer scinece.jpg"
+                                            class="imagecategory" alt="">
+                                        <h1 class="textoncards">Computer science</h1>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col categoryboxex">
+                                <a href="#">
+                                    <div class="categorybox">
+                                        <img src="storage/photos/homepage/homecategory/econommy.jpg"
+                                            class="imagecategory" alt="">
+                                        <h1 class="textoncards">Economy science </h1>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col categoryboxex">
+                                <a href="#">
+                                    <div class="categorybox">
+                                        <img src="storage/photos/homepage/homecategory/biology.jpg"
+                                            class="imagecategory" alt="">
+                                        <h1 class="textoncards2">Biology</h1>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cardscategory d-flex justify-content-center">
+                        <div class="row">
+                            <div class="col categoryboxex">
+                                <a href="#">
+                                    <div class="secondbox">
+                                        <img src="storage/photos/homepage/homecategory/physics.png"
+                                            class="imagecategory" alt="">
+                                        <h1 class="textoncards2">physics</h1>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col categoryboxex">
+                                <a href="#">
+                                    <div class="secondbox">
+                                        <img src="storage/photos/homepage/homecategory/bussnis.jpg"
+                                            class="imagecategory" alt="">
+                                        <h1 class="textoncards2">business</h1>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col categoryboxex">
+                                <a href="#">
+                                    <div class="secondbox">
+                                        <img src="storage/photos/homepage/homecategory/psycology.jpg"
+                                            class="imagecategory" alt="">
+                                        <h1 class="textoncards2">psychology</h1>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- about us section -->
+            <div id="aboutussection" class="aboutussection">
+                <div class="cboutcontain">
+                    <div class="anothercontainer">
+                        <div class="row">
+                            <div class="col">
+                                <div class="imagsectionabout">
+                                    <div class="backcolorimage">
+                                        <img src="storage/photos/about/Group 267.png" class="backcolor" alt="" />
+                                    </div>
+                                    <div class="imageaboutuscontair1 imgaboutusanimate shadow">
+                                        <img src="storage/photos/about/smith.jpeg" src="photos/about/smith.jpeg"
+                                            class="imageaboutus1 " alt="" />
+                                    </div>
+                                    <div class="imageaboutuscontair2 imgaboutusanimate shadow">
+                                        <img src="storage/photos/about/towguys.jpg" class="imageaboutus2 " alt="" />
+                                    </div>
+                                    <div class="imageaboutuscontair3 imgaboutusanimate shadow">
+                                        <img src="storage/photos/about/computer.jpg" class="imageaboutus3 " alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col ">
+                                <div class="titelaboutussection leftaboutus">
+                                    We help you to get your internship even ,<span class="success"></span>
+                                    Faster
+                                    <span class="logoaboutus leftaboutus">
+                                        <svg width="28" height="28" viewBox="0 0 48 48" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path id="Star 1"
+                                                d="M23.0093 1.19628C23.1679 0.0447888 24.8321 0.0447888 24.9907 1.19628L26.8667 14.824C26.971 15.5814 27.8521 15.9464 28.4614 15.4845L39.4242 7.17487C40.3506 6.47273 41.5274 7.64955 40.8252 8.57587L32.5156 19.5387C32.0537 20.148 32.4187 21.0291 33.1761 21.1334L46.8038 23.0095C47.9553 23.168 47.9553 24.8323 46.8038 24.9908L33.1761 26.8668C32.4187 26.9711 32.0537 27.8522 32.5156 28.4616L40.8253 39.4244C41.5274 40.3507 40.3506 41.5275 39.4243 40.8254L28.4614 32.5157C27.8521 32.0539 26.971 32.4188 26.8667 33.1763L24.9907 46.804C24.8321 47.9555 23.1679 47.9555 23.0093 46.804L21.1333 33.1763C21.029 32.4188 20.1479 32.0539 19.5386 32.5157L8.57575 40.8254C7.64943 41.5275 6.47261 40.3507 7.17475 39.4244L15.4844 28.4616C15.9463 27.8522 15.5813 26.9711 14.8239 26.8668L1.19616 24.9908C0.0446668 24.8323 0.0446668 23.168 1.19616 23.0095L14.8239 21.1334C15.5813 21.0291 15.9463 20.148 15.4844 19.5387L7.17475 8.57587C6.47261 7.64955 7.64943 6.47273 8.57575 7.17487L19.5386 15.4846C20.1479 15.9464 21.029 15.5814 21.1333 14.824L23.0093 1.19628Z"
+                                                fill="#F97F2A" />
+                                        </svg> </span>and in a <span class="success"></span>
+                                    short time
+                                </div>
+                                <div class="contentaboutus leftaboutus">
+                                    Embrace the limitless realm of creative expression, where innovation and imagination
+                                    intertwine, unveiling a captivating tapestry that weaves together the essence of
+                                    ingenuity and artistic flair.
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="point d-flex justify-content-center leftaboutus">
+                                            <div class="pointofaboutus ">
+                                                <svg width="12" height="12" viewBox="0 0 11 11" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_225_694)">
+                                                        <path
+                                                            d="M5.5 1.20312C7.87471 1.20312 9.79688 3.12492 9.79688 5.5C9.79688 7.87471 7.87508 9.79688 5.5 9.79688C3.12529 9.79688 1.20312 7.87508 1.20312 5.5C1.20312 3.12529 3.12492 1.20312 5.5 1.20312ZM5.5 0.171875C2.55735 0.171875 0.171875 2.55735 0.171875 5.5C0.171875 8.44265 2.55735 10.8281 5.5 10.8281C8.44265 10.8281 10.8281 8.44265 10.8281 5.5C10.8281 2.55735 8.44265 0.171875 5.5 0.171875ZM5.5 3.78125C4.55076 3.78125 3.78125 4.55076 3.78125 5.5C3.78125 6.44924 4.55076 7.21875 5.5 7.21875C6.44924 7.21875 7.21875 6.44924 7.21875 5.5C7.21875 4.55076 6.44924 3.78125 5.5 3.78125Z"
+                                                            fill="#36615A" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_225_694">
+                                                            <rect width="11" height="11" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                            </div>
+                                            <div class="textpoint ">
+                                                Inspires solutions, unlocking limitless potential for growth.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="sec point d-flex justify-content-center leftaboutus">
+                                            <div class="pointofaboutus">
+                                                <svg width="12" height="12" viewBox="0 0 11 11" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_225_694)">
+                                                        <path
+                                                            d="M5.5 1.20312C7.87471 1.20312 9.79688 3.12492 9.79688 5.5C9.79688 7.87471 7.87508 9.79688 5.5 9.79688C3.12529 9.79688 1.20312 7.87508 1.20312 5.5C1.20312 3.12529 3.12492 1.20312 5.5 1.20312ZM5.5 0.171875C2.55735 0.171875 0.171875 2.55735 0.171875 5.5C0.171875 8.44265 2.55735 10.8281 5.5 10.8281C8.44265 10.8281 10.8281 8.44265 10.8281 5.5C10.8281 2.55735 8.44265 0.171875 5.5 0.171875ZM5.5 3.78125C4.55076 3.78125 3.78125 4.55076 3.78125 5.5C3.78125 6.44924 4.55076 7.21875 5.5 7.21875C6.44924 7.21875 7.21875 6.44924 7.21875 5.5C7.21875 4.55076 6.44924 3.78125 5.5 3.78125Z"
+                                                            fill="#36615A" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_225_694">
+                                                            <rect width="11" height="11" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                            </div>
+                                            <div class="textpoint">
+                                                Sparks innovation, unleashing boundless imagination.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="point2 d-flex justify-content-center">
+                                            <div class="pointofaboutus">
+                                                <svg width="12" height="12" viewBox="0 0 11 11" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_225_694)">
+                                                        <path
+                                                            d="M5.5 1.20312C7.87471 1.20312 9.79688 3.12492 9.79688 5.5C9.79688 7.87471 7.87508 9.79688 5.5 9.79688C3.12529 9.79688 1.20312 7.87508 1.20312 5.5C1.20312 3.12529 3.12492 1.20312 5.5 1.20312ZM5.5 0.171875C2.55735 0.171875 0.171875 2.55735 0.171875 5.5C0.171875 8.44265 2.55735 10.8281 5.5 10.8281C8.44265 10.8281 10.8281 8.44265 10.8281 5.5C10.8281 2.55735 8.44265 0.171875 5.5 0.171875ZM5.5 3.78125C4.55076 3.78125 3.78125 4.55076 3.78125 5.5C3.78125 6.44924 4.55076 7.21875 5.5 7.21875C6.44924 7.21875 7.21875 6.44924 7.21875 5.5C7.21875 4.55076 6.44924 3.78125 5.5 3.78125Z"
+                                                            fill="#36615A" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_225_694">
+                                                            <rect width="11" height="11" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                            </div>
+                                            <div class="textpoint">
+                                                Empowers self-expression, unlocking unique perspectives.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="sec point2 d-flex justify-content-center">
+                                            <div class="pointofaboutus">
+                                                <svg width="12" height="12" viewBox="0 0 11 11" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_225_694)">
+                                                        <path
+                                                            d="M5.5 1.20312C7.87471 1.20312 9.79688 3.12492 9.79688 5.5C9.79688 7.87471 7.87508 9.79688 5.5 9.79688C3.12529 9.79688 1.20312 7.87508 1.20312 5.5C1.20312 3.12529 3.12492 1.20312 5.5 1.20312ZM5.5 0.171875C2.55735 0.171875 0.171875 2.55735 0.171875 5.5C0.171875 8.44265 2.55735 10.8281 5.5 10.8281C8.44265 10.8281 10.8281 8.44265 10.8281 5.5C10.8281 2.55735 8.44265 0.171875 5.5 0.171875ZM5.5 3.78125C4.55076 3.78125 3.78125 4.55076 3.78125 5.5C3.78125 6.44924 4.55076 7.21875 5.5 7.21875C6.44924 7.21875 7.21875 6.44924 7.21875 5.5C7.21875 4.55076 6.44924 3.78125 5.5 3.78125Z"
+                                                            fill="#36615A" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_225_694">
+                                                            <rect width="11" height="11" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                            </div>
+                                            <div class="textpoint">
+                                                Enhances problem-solving skills through creative thinking
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="scroll.html">
+                                    <button class="joinbtnaboutus loginbtnonly">More Information</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper">
+                <ul class="carousel">
+                    <li class="card shadow">
+                        <div class="titelrating">
+                            TI 3L
+                        </div>
+                        <div class="stars d-flex justify-content-center">
+                            <div class="star"><i class='bx bxs-star'></i></div>
+                            <div class="star"><i class='bx bxs-star'></i></div>
+                            <div class="star"><i class='bx bxs-star'></i></div>
+                            <div class="star"><i class='bx bxs-star'></i></div>
+                            <div class="star"><i class='bx bxs-star'></i></div>
+                        </div>
+                        <div class="line">
+                            <hr>
+                        </div>
+                        <div class="ratingcomment">
+                            Lorem ipsum dolor sit amet.
+                        </div>
+                        <div class="ratingpic">
+                            <img src="storage/photos/homepage/rating/ratingperson.jpg" class="imgrating" alt="">
+                        </div>
+                        <div class="ratingname">
+                            Abdou Moumen
+                        </div>
+                    </li>
+                    <li class="card shadow">
+                        <div class="titelrating">
+                            TI 3L
+                        </div>
+                        <div class="stars d-flex justify-content-center">
+                            <div class="star"><i class='bx bxs-star'></i></div>
+                            <div class="star"><i class='bx bxs-star'></i></div>
+                            <div class="star"><i class='bx bxs-star'></i></div>
+                            <div class="star"><i class='bx bxs-star'></i></div>
+                            <div class="star"><i class='bx bxs-star'></i></div>
+                        </div>
+                        <div class="line">
+                            <hr>
+                        </div>
+                        <div class="ratingcomment">
+                            Lorem ipsum dolor sit amet.
+                        </div>
+                        <div class="ratingpic">
+                            <img src="storage/photos/homepage/rating/ratingperson.jpg" class="imgrating" alt="">
+                        </div>
+                        <div class="ratingname">
+                            Abdou Moumen
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- footer section -->
+            <div class="footer">
+                <div class="insidefooter contactusaniiim">
+                    <div class="conactus  d-flex justify-content-around ">
+                        <div class="conacttext">
+                            <div class="conactustexthead">Contact us</div>
+                            <div class="contactustextsmall">We provide great internships & adding the word called
+                                success th</div>
+                        </div>
+                        <div class="inputcontainer">
+                            <input type="text" class="form-control contactinput" placeholder="Send your feedback">
+                            <button class="send">Send</button>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="logoinfooter">
+                            <svg width="170" height="50" viewBox="0 0 217 50" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g id="logoandname">
+                                    <g id="logo">
+                                        <path id="INTERHITCH"
+                                            d="M55.7706 13.8182V32H51.3761V13.8182H55.7706ZM74.0035 13.8182V32H70.2748L63.0393 21.5064H62.9239V32H58.5294V13.8182H62.3113L69.4669 24.294H69.6178V13.8182H74.0035ZM76.1719 17.3871V13.8182H91.5394V17.3871H86.0263V32H81.6939V17.3871H76.1719ZM93.6856 32V13.8182H106.363V17.3871H98.0802V21.1158H105.715V24.6935H98.0802V28.4311H106.363V32H93.6856ZM109.115 32V13.8182H116.626C117.987 13.8182 119.162 14.0638 120.15 14.555C121.145 15.0404 121.911 15.7388 122.45 16.6502C122.988 17.5558 123.258 18.63 123.258 19.8729C123.258 21.1335 122.983 22.2048 122.432 23.0866C121.882 23.9626 121.1 24.6314 120.088 25.093C119.076 25.5488 117.878 25.7766 116.493 25.7766H111.743V22.3143H115.676C116.339 22.3143 116.892 22.2285 117.336 22.0568C117.786 21.8793 118.126 21.6129 118.357 21.2578C118.588 20.8968 118.703 20.4351 118.703 19.8729C118.703 19.3106 118.588 18.846 118.357 18.479C118.126 18.1062 117.786 17.828 117.336 17.6445C116.886 17.4551 116.333 17.3604 115.676 17.3604H113.51V32H109.115ZM119.351 23.6903L123.879 32H119.085L114.646 23.6903H119.351ZM125.668 32V13.8182H130.063V21.1158H137.227V13.8182H141.613V32H137.227V24.6935H130.063V32H125.668ZM148.764 13.8182V32H144.369V13.8182H148.764ZM150.928 17.3871V13.8182H166.295V17.3871H160.782V32H156.45V17.3871H150.928ZM184.115 20.4055H179.676C179.617 19.9498 179.496 19.5385 179.312 19.1715C179.129 18.8046 178.886 18.4909 178.584 18.2305C178.283 17.9701 177.925 17.7718 177.51 17.6357C177.102 17.4936 176.649 17.4226 176.152 17.4226C175.27 17.4226 174.509 17.6386 173.87 18.0707C173.237 18.5027 172.749 19.1271 172.405 19.9439C172.068 20.7607 171.899 21.7491 171.899 22.9091C171.899 24.1165 172.071 25.1286 172.414 25.9453C172.764 26.7562 173.252 27.3687 173.879 27.783C174.512 28.1914 175.261 28.3956 176.125 28.3956C176.611 28.3956 177.052 28.3335 177.448 28.2092C177.851 28.0849 178.203 27.9044 178.505 27.6676C178.812 27.425 179.064 27.132 179.259 26.7887C179.46 26.4395 179.599 26.0459 179.676 25.608L184.115 25.6346C184.038 26.4395 183.805 27.2326 183.414 28.0138C183.029 28.7951 182.5 29.5083 181.825 30.1534C181.15 30.7926 180.327 31.3016 179.357 31.6804C178.392 32.0592 177.285 32.2486 176.036 32.2486C174.391 32.2486 172.917 31.8875 171.615 31.1655C170.319 30.4375 169.295 29.3781 168.544 27.9872C167.792 26.5964 167.416 24.9036 167.416 22.9091C167.416 20.9086 167.798 19.2129 168.561 17.8221C169.325 16.4312 170.358 15.3748 171.66 14.6527C172.962 13.9306 174.421 13.5696 176.036 13.5696C177.137 13.5696 178.155 13.7235 179.09 14.0312C180.026 14.3331 180.848 14.777 181.559 15.3629C182.269 15.9429 182.846 16.6561 183.29 17.5025C183.734 18.3488 184.009 19.3165 184.115 20.4055ZM186.63 32V13.8182H191.025V21.1158H198.189V13.8182H202.575V32H198.189V24.6935H191.025V32H186.63Z"
+                                            fill="#36615A" />
+                                    </g>
+                                    <g id="Group 13">
+                                        <path id="Rectangle 5"
+                                            d="M0 23.0726L21.7523 -2.24155e-05C27.5445 5.46065 27.8132 14.5828 22.3525 20.375L10.4876 32.9601L0 23.0726Z"
+                                            fill="#36615A" />
+                                        <path id="Rectangle 6"
+                                            d="M18.2477 49.152C12.4555 43.6913 12.1869 34.5691 17.6475 28.777L29.5124 16.1919L40 26.0793L18.2477 49.152Z"
+                                            fill="#7C8D8A" />
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="socialmediaicons d-flex justify-content-between">
+                            <div class="iconsocial"><i class='bx bxl-twitter'></i></div>
+                            <div class="iconsocial"><i class='bx bxl-telegram'></i></div>
+                            <div class="iconsocial"><i class='bx bxl-instagram'></i></div>
+                            <div class="iconsocial"><i class='bx bxl-facebook-square'></i></div>
+                            <div class="iconsocial"><i class='bx bxl-linkedin-square'></i></div>
+                        </div>
+                        <div class="copyright">
+                            Acee fezfl Acee fezfl Acee fezfl Acee fezfl
+                        </div>
+                    </div>
+                    <div class="col secondrawfooter">
+                        <div class="headtitelfooter">
+                            Bullshit
+                        </div>
+                        <div class="contentfootersec">
+                            <div class="con1">crismes azzas </div>
+                            <div class="con1">Acee fezfl mljvjve</div>
+                            <div class="con1">Razdaz aza</div>
+                            <div class="con1">Uodvd kqlq qq</div>
+                            <div class="con1">Razdaz </div>
+                        </div>
+                    </div>
+
+                    <div class="col Thirdrawfooter">
+                        <div class="headtitelfooter">
+                            Bullshit
+                        </div>
+                        <div class="contentfootersec">
+                            <div class="con1">crismes azzas </div>
+                            <div class="con1">Acee fezfl mljvjve</div>
+                            <div class="con1">Razdaz aza</div>
+                            <div class="con1">Uodvd kqlq qq</div>
+                            <div class="con1">Razdaz </div>
+                        </div>
+                    </div>
+
+                    <div class="col Fourthrawfooter">
+                        <div class="headtitelfooter">
+                            Bullshit
+                        </div>
+                        <div class="contentfootersec">
+                            <div class="con1">crismes azzas </div>
+                            <div class="con1">Acee fezfl mljvjve</div>
+                            <div class="con1">Razdaz aza</div>
+                            <div class="con1">Uodvd kqlq qq</div>
+                            <div class="con1">Razdaz </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"
+    integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ=="
+    crossorigin="anonymous" F referrerpolicy="no-referrer"></script>
+<!-- ScrollTrigger -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+<script src="homepage.js"></script>
+<script>
+    const wrapper = document.querySelector(".wrapper");
+    const carousel = document.querySelector(".carousel");
+    const firstCardWidth = carousel.querySelector(".card").offsetWidth;
+    const carouselChildrens = [...carousel.children];
+
+    let isDragging = false,
+        isAutoPlay = true,
+        startX, startScrollLeft, timeoutId;
+
+    // Get the number of cards that can fit in the carousel at once
+    let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth);
+
+    // Insert copies of the last few cards to beginning of carousel for infinite scrolling
+    carouselChildrens.slice(-cardPerView).reverse().forEach(card => {
+        carousel.insertAdjacentHTML("afterbegin", card.outerHTML);
+    });
+
+    // Insert copies of the first few cards to end of carousel for infinite scrolling
+    carouselChildrens.slice(0, cardPerView).forEach(card => {
+        carousel.insertAdjacentHTML("beforeend", card.outerHTML);
+    });
+
+    // Scroll the carousel at appropriate postition to hide first few duplicate cards on Firefox
+    carousel.classList.add("no-transition");
+    carousel.scrollLeft = carousel.offsetWidth;
+    carousel.classList.remove("no-transition");
+
+
+    const dragStart = (e) => {
+        isDragging = true;
+        carousel.classList.add("dragging");
+        // Records the initial cursor and scroll position of the carousel
+        startX = e.pageX;
+        startScrollLeft = carousel.scrollLeft;
+    }
+
+    const dragging = (e) => {
+        if (!isDragging) return; // if isDragging is false return from here
+        // Updates the scroll position of the carousel based on the cursor movement
+        carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
+    }
+
+    const dragStop = () => {
+        isDragging = false;
+        carousel.classList.remove("dragging");
+    }
+
+    const infiniteScroll = () => {
+        // If the carousel is at the beginning, scroll to the end
+        if (carousel.scrollLeft === 0) {
+            carousel.classList.add("no-transition");
+            carousel.scrollLeft = carousel.scrollWidth - (2 * carousel.offsetWidth);
+            carousel.classList.remove("no-transition");
+        }
+        // If the carousel is at the end, scroll to the beginning
+        else if (Math.ceil(carousel.scrollLeft) === carousel.scrollWidth - carousel.offsetWidth) {
+            carousel.classList.add("no-transition");
+            carousel.scrollLeft = carousel.offsetWidth;
+            carousel.classList.remove("no-transition");
+        }
+
+        // Clear existing timeout & start autoplay if mouse is not hovering over carousel
+        clearTimeout(timeoutId);
+        if (!wrapper.matches(":hover")) autoPlay();
+    }
+
+    const autoPlay = () => {
+        if (window.innerWidth < 800 || !isAutoPlay)
+            return; // Return if window is smaller than 800 or isAutoPlay is false
+        // Autoplay the carousel after every 2500 ms
+        timeoutId = setTimeout(() => carousel.scrollLeft += firstCardWidth, 2500);
+    }
+    autoPlay();
+
+    carousel.addEventListener("mousedown", dragStart);
+    carousel.addEventListener("mousemove", dragging);
+    document.addEventListener("mouseup", dragStop);
+    carousel.addEventListener("scroll", infiniteScroll);
+    wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
+    wrapper.addEventListener("mouseleave", autoPlay);
+</script>
+
+</html>
